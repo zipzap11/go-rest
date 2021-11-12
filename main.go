@@ -8,8 +8,8 @@ import (
 )
 
 type article struct {
-	ID int `json:"id"`
-	Title string `json:"title"`
+	ID      int    `json:"id"`
+	Title   string `json:"title"`
 	Content string `json:"content"`
 }
 
@@ -48,7 +48,6 @@ func HelloController(e echo.Context) error {
 func AddArticle(e echo.Context) error {
 	newArticle := article{}
 	e.Bind(&newArticle)
-	// data := append(data, newArticlce)
-	// a := append(newArticle, )
+	data = append(data, newArticle)
 	return e.JSON(http.StatusOK, "Sucess add article")
 }
