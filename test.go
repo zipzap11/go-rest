@@ -30,7 +30,7 @@ func articles(w http.ResponseWriter, r *http.Request) {
 	}
 	http.Error(w, "", http.StatusBadRequest)
 }
-func main1() { 
+func main2() {
 	http.HandleFunc("/articles", articles)
 	fmt.Println("Starting web server at http://localhost:8080")
 	http.ListenAndServe(":8080", nil)

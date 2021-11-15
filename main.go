@@ -18,7 +18,7 @@ var data = []article{
 	{2, "ipsum", "ipsum"},
 }
 
-func main() {
+func main1() {
 	e := echo.New()
 	e.GET("/", HelloController)
 	e.GET("/articles", GetArticlesController)
