@@ -9,7 +9,8 @@ import (
 
 func New() *echo.Echo {
 	e := echo.New()
-	md.LogMiddleware(*e)
+	md.HTTPSMiddleware(e)
+	md.LogMiddleware(e)
 	e.POST("/users", controller.CreateUserController)
 	e.GET("/users", controller.GetUsersController)
 	return e
